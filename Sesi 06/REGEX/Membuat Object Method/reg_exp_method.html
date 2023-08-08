@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Belajar Memahami Object Method</title>
+  </head>
+  <body>
+    <h1>Memahami Object Method di regExp</h1>
+    <script>
+      //silahkan buat dua buah variabel dengan object literal dan method
+      var x = "Javascript"; //contoh string untuk method
+      var y = /Javascript/; // contoh literal atau regular expresiom
+      //kita cek terlebihdahulu menggunakan consol
+      console.log(y.test(x)); //true
+
+      //sekarang kita cari dengan literal yaitu cek menggunakan /
+      console.log(/Belajar/.test(x)); //apakah keyword Belajar ada di dalam test variabel X jika ada maka True
+      //yah bener hasilnya true karena betul keyword Belajar ada di dalam Variabel X
+      //==================================================================================================
+      console.log(/belajar/.test(x)); //hasilnya akan false karna ada kesalahan huruf seharusnya menggunakan (B) besa bukan (b) kecil
+    </script>
+  </body>
+</html>

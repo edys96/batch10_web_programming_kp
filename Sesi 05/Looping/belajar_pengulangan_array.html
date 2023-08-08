@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Pengulangan</title>
+</head>
+<body>
+    <button onclick="print()">Cetak Makanan Kesukaan</button>
+    <ol id="list"></ol>
+
+    <script>
+        function print() {
+           const data = document.getElementById("list")
+           const makanan_kesukaan = ["Mie Goreng", "Mie Ayam", "Mie Baso"]
+            for (let index = 0; index < makanan_kesukaan.length ; index = index +1){
+              data.innerHTML=data.innerHTML + `<li>${makanan_kesukaan[index]}</li>`
+            }
+        }
+    </script>
+    
+</body>
+</html>

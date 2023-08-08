@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Latihan membuat warna</title>
+  </head>
+  <body>
+    <h1>latihan membuat aplikasi mengubah warna text maupun background</h1>
+    <input type="color" id="warnaTulisan" />
+    <br />
+    <input type="color" id="warnaBackground" />
+
+    <script>
+        
+      var text = document.getElementById('warnaTulisan');
+      var background = document.getElementById('warnaBackground');
+      text.addEventListener("change",(event)=>{
+        document.body.style.color = text.value;
+      });
+      
+       background.addEventListener("change",(event)=>{
+        document.body.style.backgroundColor = background.value;
+       });
+
+    </script>
+  </body>
+</html>

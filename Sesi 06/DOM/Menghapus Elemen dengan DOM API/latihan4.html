@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan menghapus elment dengan DOM api</title>
+</head>
+<body>
+    <h2 id="contoh"> Hallo world</h2>
+    <h2 id="contoh1"> Hallo Bro</h2>
+
+    <script>
+        var h2 = document.getElementById('contoh');
+
+        h2.remove();
+        
+        console.log("elmen h2 dengan tulisan hello world sudah hilang");
+        console.log(h2);
+    </script>
+</body>
+</html>

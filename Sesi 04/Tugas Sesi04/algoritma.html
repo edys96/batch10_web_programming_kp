@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>algoritma</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    form {
+      text-align: center;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input[type="number"] {
+      padding: 5px;
+      width: 150px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    .result {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    .result p {
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>INPUT OUTPUT LINGKARAN</h1>
+  <form>
+    <label for="radius">Masukkan Jari-Jari Lingkaran:</label>
+    <input type="number" id="radius" placeholder="Masukkan jari-jari">
+    <button type="button" onclick="hitungLingkaran()">Hitung</button>
+  </form>
+
+  <div class="result">
+    <p>Hasil:</p>
+    <p>Luas Lingkaran: <span id="luas"></span></p>
+    <p>Keliling Lingkaran: <span id="keliling"></span></p>
+  </div>
+
+  <script>
+    function hitungLingkaran() {
+      const radiusInput = document.getElementById("radius");
+      const radius = parseFloat(radiusInput.value);
+
+      if (isNaN(radius) || radius <= 0) {
+        alert("Masukkan angka yang valid untuk jari-jari lingkaran.");
+        return;
+      }
+
+      const luas = Math.PI * radius * radius;
+      const keliling = 2 * Math.PI * radius;
+
+      const luasOutput = document.getElementById("luas");
+      const kelilingOutput = document.getElementById("keliling");
+
+      luasOutput.textContent = luas.toFixed(2);
+      kelilingOutput.textContent = keliling.toFixed(2);
+    }
+  </script>
+</body>
+</html>

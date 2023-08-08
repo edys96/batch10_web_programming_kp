@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Menghitung Maju dan Mundur</title>
+  </head>
+  <body>
+    <h1>Hitung Mundur Dan Maju</h1>
+  </body>
+  <button onclick="mundur()">Hitung Mundur</button>
+  <button onclick="maju()">Hitung Maju</button>
+  <h1 id="hasil"></h1>
+  <script>
+    var angka = 0;
+    var hasil = document.getElementById("hasil");
+    function mundur() {
+      hasil.innerHTML = angka;
+      angka --;
+    }
+    function maju() {
+      hasil.innerHTML = angka;
+      angka ++;
+    }
+  </script>
+</html>

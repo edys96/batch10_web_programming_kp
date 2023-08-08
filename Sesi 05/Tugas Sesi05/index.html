@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Sesi 05</title>
+</head>
+<body>
+    <label>
+        <input type="text" id="masukanText" placeholder="Silahkan Masukan Text">
+    </label>
+    <br>
+    <br>
+    <label>
+        <input type="number" id="masukanNumber" placeholder="Silahkan Masukan jumlah">
+    </label>
+    <br>
+    <br>
+    <button onclick="cek()">Cetak</button>
+    <br>
+    <ul id="show"></ul>
+
+    <script>
+        function cek(){
+            const masukanText = document.getElementById("masukanText").value;
+            const masukanNumber = document.getElementById("masukanNumber").value;
+            parseInt (document.getElementById("masukanNumber").value);
+
+            let show = "";
+            for (let data = 0; data < masukanNumber; data++) {
+                show += (data+1)+"." + masukanText + "<br>"
+
+                document.getElementById("show").innerHTML = show;
+            }
+        }
+    </script>
+</body>
+</html>
